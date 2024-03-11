@@ -1,0 +1,68 @@
+/* Contact.css */
+
+/* Container Styles */
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Heading Styles */
+  .contact-container h2 {
+    color: #333;
+    font-size: 2.5em;
+  }
+  
+  /* Description Styles */
+  .contact-description {
+    color: #555;
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
+  /* Form Styles */
+  .contact-form {
+    margin-top: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 1.1em;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 1em;
+  }
+  
+  .contact-form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Contact Info Styles */
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  .contact-info p {
+    color: #777;
+    font-size: 1.1em;
+    margin: 5px 0;
+  }
+  

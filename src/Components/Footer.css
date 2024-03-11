@@ -1,0 +1,38 @@
+/* Footer.css */
+
+/* Footer.css */
+
+/* Footer.css */
+
+body {
+    margin: 0;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .contact-info,
+  .hours {
+    flex: 1;
+  }
+  
+  .contact-info p,
+  .hours p {
+    margin: 1; /* You might want to adjust this margin based on your design */
+  }
+  
+  

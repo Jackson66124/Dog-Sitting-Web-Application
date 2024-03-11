@@ -1,0 +1,48 @@
+/* BookingForm.css */
+
+/* Add this to your BookingForm.css file */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Style for drop-off and pick-up time labels */
+
+/* Style for drop-off and pick-up time select boxes */
+select#startTime,
+select#endTime {
+  /* Add your specific styles here */
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Style for the submit button */
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,56 @@
+/* index.css */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Apply a basic font style */
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Add this line to remove body margin */
+    padding: 0;
+    background-color: #d12525;
+  }
+  
+  /* Style the root element where your React app is mounted */
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  /* Apply some styling to the header */
+  header {
+    background-color: #ffffff;
+    color: rgb(197, 2, 2);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* Style the main content area */
+  .App {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  /* Add a bit of spacing to individual components */
+  .component {
+    margin-bottom: 1rem;
+  }
+  
+  /* Apply some styling to links */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
