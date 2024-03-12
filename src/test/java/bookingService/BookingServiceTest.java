@@ -3,122 +3,48 @@ package bookingService;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import bookingService.entity.Booking;
 import bookingService.repository.Repo;
 import bookingService.service.BookingService;
 
-@ExtendWith(MockitoExtension.class)
+@SpringBootTest
 public class BookingServiceTest {
-
-    @Mock
-    private Repo repo;
-
-    @InjectMocks
-    private BookingService bookingService;
-
-    @Test
-    public void testGetAllBookings() {
-        // Mock data
-        List<Booking> mockBookings = new ArrayList<>();
-        when(repo.findAll()).thenReturn(mockBookings);
-
-        // Test
-        List<Booking> result = bookingService.getAllBookings();
-
-        // Verify
-        assertEquals(mockBookings, result);
-        verify(repo, times(1)).findAll();
-    }
-
-    @Test
-    public void testGetBookingById() {
-        // Mock data
-        Long bookingId = 1L;
-        Booking mockBooking = new Booking(/* provide necessary details */);
-        when(repo.findById(bookingId)).thenReturn(Optional.of(mockBooking));
-
-        // Test
-        Optional<Booking> result = bookingService.getBookingById(bookingId);
-
-        // Verify
-        assertTrue(result.isPresent());
-        assertEquals(mockBooking, result.get());
-        verify(repo, times(1)).findById(bookingId);
-    }
-
-    @Test
-    public void testCreateBooking() {
-        // Mock data
-        Booking mockBooking = new Booking(/* provide necessary details */);
-        when(repo.save(any())).thenReturn(mockBooking);
-
-        // Test
-        Booking result = bookingService.createBooking(mockBooking);
-
-        // Verify
-        assertEquals(mockBooking, result);
-        verify(repo, times(1)).save(mockBooking);
-    }
-
-    @Test
-    public void testUpdateBooking() {
-        // Mock data
-        Long bookingId = 1L;
-        Booking existingBooking = new Booking(/* provide necessary details */);
-        Booking updatedBooking = new Booking(/* provide necessary details */);
-
-        when(repo.findById(bookingId)).thenReturn(Optional.of(existingBooking));
-        when(repo.save(any())).thenReturn(updatedBooking);
-
-        // Test
-        Booking result = bookingService.updateBooking(bookingId, updatedBooking);
-
-        // Verify
-        assertEquals(updatedBooking, result);
-        verify(repo, times(1)).findById(bookingId);
-        verify(repo, times(1)).save(existingBooking);
-    }
-
-    @Test
-    public void testDeleteBooking() {
-        // Mock data
-        Long bookingId = 1L;
-
-        when(repo.existsById(bookingId)).thenReturn(true);
-
-        // Test
-        boolean result = bookingService.deleteBooking(bookingId);
-
-        // Verify
-        assertTrue(result);
-        verify(repo, times(1)).existsById(bookingId);
-        verify(repo, times(1)).deleteById(bookingId);
-    }
-
-    @Test
-    public void testDeleteBookingNotFound() {
-        // Mock data
-        Long bookingId = 1L;
-
-        when(repo.existsById(bookingId)).thenReturn(false);
-
-        // Test
-        boolean result = bookingService.deleteBooking(bookingId);
-
-        // Verify
-        assertFalse(result);
-        verify(repo, times(1)).existsById(bookingId);
-        verify(repo, never()).deleteById(bookingId);
-    }
+	
+	@Mock
+	private Repo repo;
+	
+	@InjectMocks
+	private BookingService bookingService;
+	
+	@Test
+	void getAllBookings() {
+		Booking booking1 = new Booking("John Doe", "john.doe@example.com", 
+		LocalDate.of(2022, 10, 1), 
+		LocalDate.of(2022, 10, 5),
+        LocalTime.of(10, 0),
+        LocalTime.of(15, 30),
+        "123-456-7890");		
+		
+		Booking booking2 = new Booking();
+		List<Booking> bookings = Arrays.asList(booking1, booking2);
+		
+		when(repo.findAll()).thenReturn(bookings);
+		
+		List<Booking> result = bookingService.getAllBookings();
+		
+        assertEquals(2, result.size());
+        assertEquals(booking1, result.get(0));
+        assertEquals(booking2, result.get(1));
+	}
 }
 

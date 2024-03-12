@@ -1,7 +1,6 @@
 package bookingService.entity;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 import jakarta.persistence.Column;
@@ -9,13 +8,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+
 
 @Entity
 @Table(name = "DogBookings")
-@NoArgsConstructor
-@AllArgsConstructor
 public class Booking {
     
     @Id
@@ -43,8 +39,23 @@ public class Booking {
     
     @Column(nullable = false, name = "PhoneNumber")
     private String phoneNumber;
+    
+    public Booking() {
+    	
+    }
+    
+    public Booking(String name, String email, LocalDate startDate, LocalDate endDate,
+            LocalTime startTime, LocalTime endTime, String phoneNumber) {
+    	this.name = name;
+    	this.email = email;
+    	this.startDate = startDate;
+    	this.endDate = endDate;
+    	this.startTime = startTime;
+    	this.endTime = endTime;
+    	this.phoneNumber = phoneNumber;
+}
 
-    // Getter and setter methods...
+    // Getter and setter methods
 
     public Long getId() {
         return id;
