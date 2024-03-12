@@ -1,13 +1,10 @@
-/* Contact.css */
 
-/* Container Styles */
 .contact-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
   }
   
-  /* Heading Styles */
   .contact-container h2 {
     color: #333;
     font-size: 2.5em;

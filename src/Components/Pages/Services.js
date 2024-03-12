@@ -1,6 +1,4 @@
-// src/components/Services.js
 
-// Services.js
 import React from 'react';
 import './Services.css';
 

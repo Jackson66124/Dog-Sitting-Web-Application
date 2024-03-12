@@ -1,16 +1,15 @@
-// App.js
 
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import About from './Components/About';
-import Home from './Components/Home';
-import Services from './Components/Services';
-import Contact from './Components/Contact';
-import Reviews from './Components/Reviews';
-import Booking from './Components/Booking';
-import Login from './Components/Login';
-import Footer from './Components/Footer';
+import Navbar from './Components/Elements/Navbar';
+import About from './Components/About/About';
+import Home from './Components/Pages/Home';
+import Services from './Components/Pages/Services';
+import Contact from './Components/Pages/Contact';
+import Reviews from './Components/Pages/Reviews';
+import Booking from './Components/Booking/Booking';
+import Login from './Components/Pages/Login';
+import Footer from './Components/Elements/Footer';
 
 function App() {
   return (

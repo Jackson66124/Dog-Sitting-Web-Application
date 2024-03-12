@@ -1,6 +1,4 @@
-/* Reviews.css */
 
-/* Reviews.css */
 
 .reviews-container {
     max-width: 1200px;
@@ -17,7 +15,7 @@
   
   .review-card {
     margin: 20px;
-    max-width: 400px; /* Adjust the max-width to make the cards wider */
+    max-width: 400px; 
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;

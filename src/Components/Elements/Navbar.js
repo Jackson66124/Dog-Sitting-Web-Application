@@ -21,7 +21,7 @@ function Navbar() {
   }
 
   React.useEffect(() => {
-    showButton(); // Set initial state on mount
+    showButton(); 
     window.addEventListener('resize', showButton);
     return () => {
       window.removeEventListener('resize', showButton);

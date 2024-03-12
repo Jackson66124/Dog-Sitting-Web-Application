@@ -1,4 +1,4 @@
-// Reviews.js
+
 import React from 'react';
 import './Reviews.css';
 

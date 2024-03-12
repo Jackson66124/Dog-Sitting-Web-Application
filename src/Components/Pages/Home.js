@@ -1,8 +1,8 @@
-// src/components/Home.js
+
 
 import React from 'react';
 import './Home.css';
-import Card from './Card'; // Import your Card component
+import Card from '../Elements/Card'; // Import Card component
 
 
 function Home() {

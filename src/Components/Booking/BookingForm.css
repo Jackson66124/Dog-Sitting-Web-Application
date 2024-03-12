@@ -1,6 +1,4 @@
-/* BookingForm.css */
 
-/* Add this to your BookingForm.css file */
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -22,12 +20,9 @@ select {
   box-sizing: border-box;
 }
 
-/* Style for drop-off and pick-up time labels */
 
-/* Style for drop-off and pick-up time select boxes */
 select#startTime,
 select#endTime {
-  /* Add your specific styles here */
   width: 100%;
   padding: 10px;
   box-sizing: border-box;

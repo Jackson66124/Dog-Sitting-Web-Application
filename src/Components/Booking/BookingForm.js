@@ -1,4 +1,4 @@
-// BookingForm.js
+
 
 import React, { useState } from 'react';
 import './BookingForm.css';
@@ -39,7 +39,6 @@ const BookingForm = () => {
     console.log('Submitting form data:', formDataForServer);
   
     try {
-      // Assuming your Spring Boot API endpoint for creating bookings is '/bookings'
       await axios.post('http://localhost:8080/bookings', formDataForServer);
   
       const daysBooked = calculateDaysDifference(formData.startDate, formData.endDate);
@@ -48,7 +47,6 @@ const BookingForm = () => {
       window.location.href = 'http://localhost:3000';
     } catch (error) {
       console.error('Error creating booking:', error);
-      // Handle error scenarios, show an error message, etc.
     }
   };
 

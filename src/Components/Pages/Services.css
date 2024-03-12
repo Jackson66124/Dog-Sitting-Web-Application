@@ -1,13 +1,10 @@
-/* Services.css */
 
-/* Container Styles */
 .services-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
   }
   
-  /* Service Styles */
   .service {
     margin-top: 30px;
   }

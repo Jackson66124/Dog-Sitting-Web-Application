@@ -1,7 +1,6 @@
-// Login.js
-// Login.js
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // If you're using React Router for navigation
+import { Link } from 'react-router-dom'; 
 import './Login.css';
 
 function Login() {
@@ -11,7 +10,6 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Add logic for authentication or API call here
     console.log(`Logging in with username: ${username} and password: ${password}`);
   };
 
@@ -46,7 +44,6 @@ function Login() {
 
         {isNewAccount && (
           <div>
-            {/* Additional fields for creating a new account, e.g., email, name, etc. */}
             <label htmlFor="email">Email:</label>
             <input type="email" id="email" name="email" required />
           </div>
